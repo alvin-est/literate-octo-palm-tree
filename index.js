@@ -1,7 +1,7 @@
 /* 
 
 Alvin Estado
-The Coding Bootcamp 
+The Coding Bootcamp (USYD)
 
 2024 ©
 
@@ -12,15 +12,13 @@ CREDITS & DISCLAIMER:
 
 */
 
-// let message = "Hello, World!";
-// console.log(message);
-
 const inquirer = require("inquirer");
-// const colors = require("colors");
+// To-do: Also implement fs to write out to MD file in Markup with user responses
 
 console.log("\n\nWelcome to README generator v0.1!\n");
 
-inquirer.prompt([
+inquirer
+.prompt([
     {
     type: 'list',
     name: 'proceed',
@@ -33,18 +31,56 @@ inquirer.prompt([
         console.log("\n\nExiting.\n")
         return;
     }
-    console.log("\n\nYou have decided to proceed.\n");
+    console.log("\n");
+    console.log('* --- --- --- --- --- *');
+    console.log("\n");
+    console.log("You have decided to proceed.\n");
 
     console.log("You will be guided through a series of questions.");
     console.log("Each more daunting than the last.");
     console.log("Try to answer honestly.");
     console.log("You might just survive!");
     console.log("\n");
+    console.log('* --- --- --- --- --- *');
+    console.log("\n");
 })
-.then((nextResponse) => {
+.then((response) => {
+    console.log('Let\'s create a README for your app project!');
+    console.log('Answer the relevant questions below.');
+    console.log('\n');
 
-})
-;
+
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'descQ1',
+            message: 'What was your motivation?'
+        },
+        {
+            type: 'input',
+            name: 'descQ2',
+            message: 'Why did you build this project?'
+        },
+        {
+            type: 'input',
+            name: 'descQ3',
+            message: 'What problem does it solve?'
+        },
+        {
+            type: 'input',
+            name: 'descQ4',
+            message: 'What did you learn?'
+        }
+    ]).then((response) => {
+        console.log('\n')
+        console.log(`Motivation: \n${response.descQ1}\n`)
+        console.log(`Why Behind the Project: \n${response.descQ2}\n`)
+        console.log(`How does it help?: \n${response.descQ3}\n`)
+        console.log(`Learnings: \n${response.descQ4}\n`)
+
+    })
+});
+
 
 
 
