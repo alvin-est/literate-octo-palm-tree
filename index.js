@@ -1,12 +1,24 @@
+/* 
+
+Alvin Estado
+The Coding Bootcamp 
+
+2024 ©
+
+CREDITS & DISCLAIMER:
+    xAI's Grok was used for semantic reference (syntax) in the making of this app.
+    No robots were harmed. 
+    Overall design (still) made by human.
+
+*/
+
 // let message = "Hello, World!";
 // console.log(message);
 
 const inquirer = require("inquirer");
-const colors = require("colors");
+// const colors = require("colors");
 
 console.log("\n\nWelcome to README generator v0.1!\n");
-let x;
-
 
 inquirer.prompt([
     {
@@ -22,7 +34,19 @@ inquirer.prompt([
         return;
     }
     console.log("\n\nYou have decided to proceed.\n");
-});
+
+    console.log("You will be guided through a series of questions.");
+    console.log("Each more daunting than the last.");
+    console.log("Try to answer honestly.");
+    console.log("You might just survive!");
+    console.log("\n");
+})
+.then((nextResponse) => {
+
+})
+;
+
+
 
 
 
