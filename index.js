@@ -152,6 +152,8 @@ function markdownOps(data) {
                     return;
                 }
             });
+            
+            write();
         }
         else {
             // Directory exists
