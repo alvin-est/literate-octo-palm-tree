@@ -15,12 +15,14 @@ This app will generate a template README file for you!
 ## Installation
 By installing NodeJS development environment in their localhost or server and then cloning the repo.
 ## Usage
-In the console, write the command 'npm i' to install relevant packages and then 'node index' to start the app.
+In the console, write the command 'npm i' to install relevant packages and then 'node index' to start the app.  
+
+See walkthrough video: https://youtu.be/6LsSD8PdP40
 ## License
       This project is licensed under the MIT license.
-## Contributing
-Alvin
+## Contributers
+Alvin (Human), Copilot (AI), Grok (AI)
 ## Tests
-None, at this point in time.
+None yet, at this point in time.
 ## Questions
 If you have any questions, please contact me at [contact@alvin-the.dev](mailto:contact@alvin-the.dev). You can also find me on GitHub at [@alvin-est](https://github.com/@alvin-est).  
