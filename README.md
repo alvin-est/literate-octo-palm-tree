@@ -1,10 +1,10 @@
-# Professional README Generator Starter Code
+# Alvin's Professional README Generator
 
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-It will generate a template README for you!
+This app will generate a template README file for you!
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)

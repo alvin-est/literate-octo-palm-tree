@@ -3,3 +3,4 @@ node_modules
 Develop/
 package-lock.json
 sample.txt
+output/
