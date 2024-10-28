@@ -8,21 +8,28 @@ The Coding Bootcamp (USYD)
 CREDITS & DISCLAIMER:
     xAI's Grok was used for semantic reference (syntax) in the making of this app.
     GitHub Copilot used for code block suggestions.
-    No robots were harmed. 
+    No robots were harmed.
     Overall effort (still) made by human.
 
 */
 
+// Inquirer for user prompts
 const inquirer = require("inquirer");
+
+// Import our generateMarkdown module
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// To-do: Also implement fs to write out to MD file in Markup with user responses
+// Import fs for file writing
+const fs = require("fs");
 
+// Welcome message
 console.log("\n\nWelcome to README generator v0.1!\n");
 console.log("\n\You will be guided through a series of prompts used to generate README.\n");
 
+// Variables for user input
 let title = description = installation = license = contributing = tests = email = github = "";
 
+// Inquirer prompts
 inquirer.prompt([
     {
         type: 'list',
@@ -76,7 +83,6 @@ inquirer.prompt([
         console.log("\n\nExiting.\n")
         return;
     }
-    // code here
     title = response.title;
     description = response.description;
     installation = response.installation;
@@ -86,5 +92,35 @@ inquirer.prompt([
     email = response.email;
     github = response.github;
     // console.log(response);
+
+    // Generate markdown
+    const markdownContent = generateMarkdown({
+        title,
+        description,
+        installation,
+        license,
+        contributing,
+        tests,
+        email,
+        github
+    });
+
+    // Write to file
+    fs.writeFile("README.md", markdownContent, (err) => {
+        // Checks for error with the writeFile process
+        if (err) {
+            console.log("Error writing to file", err);
+            return;
+        } 
+        
+        console.log("\n\nREADME.md created successfully!\n");
+    });
 })
+.catch((err) => {
+    // Catches any general errors with the inquirer process
+    console.log("Error", err);
+});
+
+
+
 
