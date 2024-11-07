@@ -85,7 +85,7 @@ function prompt() {
         {
             type: 'input',
             name: 'contributing',
-            message: 'Who were the main project contributors?'
+            message: 'Who were the main project contributors? @'
         },
         {
             type: 'input',
@@ -95,12 +95,12 @@ function prompt() {
         {
             type: 'input',
             name: 'email',
-            message: 'Fill out your email address.'
+            message: 'Fill out your email address:'
         },
         {
             type: 'input',
             name: 'github',
-            message: 'Fill out your GitHub username.'
+            message: 'Fill out your GitHub username: @'
         },
     ])
     .then((response) => {
